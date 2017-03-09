@@ -11,8 +11,8 @@ $(document).ready(function(){
  *EDIÇÃO DA INFORMAÇÃO
  */
 
-$('#switchEdit').on('switchChange.bootstrapSwitch', function(e, state) {
-    $('.text-editor-info').slideToggle();
+$(document).on('switchChange.bootstrapSwitch', function() {
+    $('.text-editor-agrupador').slideToggle();
 });
 
 //AO CLICAR PARA EDITAR DA INFORMAÇÃO
