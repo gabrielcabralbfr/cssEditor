@@ -11,23 +11,13 @@ $(document).ready(function(){
  *EDIÇÃO DA INFORMAÇÃO
  */
 
-$(document).on('switchChange.bootstrapSwitch', function() {
-    $('.text-editor-agrupador').slideToggle();
-});
+
 
 //AO CLICAR PARA EDITAR DA INFORMAÇÃO
    //EXIBE O MENU DE EDIÇÃO
-/*$(document).on('switchChange.bootstrapSwitch', function (event, state) {
-    if ($(this).bootstrapSwitch('state')) { 
-      $('.text-editor-info').slideToggle();
-    }
- 
-    });*/
-
-     $(document).on('click','#switchEdit .edit',function(){
-   //EXIBE O MENU DE EDIÇÃO
-    $('.text-editor-info').slideToggle();
-    });
+$(document).on('switchChange.bootstrapSwitch', function() {
+     $('.editor').slideToggle();
+});
 
 //QUANDO A TECLA É LIBERADA DO INPUT DO BG
     $(document).on("keyup", "#bgcolor-input", function(){
