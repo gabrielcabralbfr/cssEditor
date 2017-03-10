@@ -119,6 +119,7 @@ color:rgb(0, 57, 85);
 {
 background-color:rgba(0, 0, 0, 0);
 background-image:none;
+font-weight: 
 }
 
 .topico
@@ -126,7 +127,7 @@ background-image:none;
 font-family:Calibri;
 font-size:20px;
 font-style:normal;
-font-weight:bold;
+/*font-weight:bold;*/
 color:rgb(66, 66, 81);
 background-color:rgb(255, 255, 255);
 text-align:left;

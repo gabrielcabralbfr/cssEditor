@@ -1,25 +1,31 @@
 
 $(document).ready(function(){
- $("[name='my-checkbox']").bootstrapSwitch('state', false);
+ $("input[name='switch-editor']").bootstrapSwitch(); //inicializa o switch
+});
 
-
+/*
+* ATRIBUI UM SWITCH PARA CADA DIV -- INCOMPLETO
+*/
+$(document).on('switchChange.bootstrapSwitch', '#switch-idioma', function() {
+   $('.editar-idioma').slideToggle(800);
 });
 
 
-
-/**
- *EDIÇÃO DA INFORMAÇÃO
- */
-
-
-
-//AO CLICAR PARA EDITAR DA INFORMAÇÃO
-   //EXIBE O MENU DE EDIÇÃO
-$(document).on('switchChange.bootstrapSwitch', function() {
-     $('.editor').slideToggle();
+$(document).on('switchChange.bootstrapSwitch', '#switch-informacao', function() {
+     $('.editor-info').slideToggle(800);
 });
 
-//QUANDO A TECLA É LIBERADA DO INPUT DO BG
+$(document).on('switchChange.bootstrapSwitch', '#switch-agrupador', function() {
+     $('.editor-agrupador').slideToggle(800);
+});
+
+
+/*
+* FIM ATRIBUI UM SWITCH PARA CADA DIV
+*/
+
+
+//BACKGROUND COLOR
     $(document).on("keyup", "#bgcolor-input", function(){
   //ALTERA-SE A COR DE FUNDO DO 3º PAI DESTE ELEMENTO COM O VALOR DIGITADO
   var color_value = $(this).val();
@@ -28,31 +34,42 @@ $(document).on('switchChange.bootstrapSwitch', function() {
   });
 });
 
-//QUANDO A TECLA É LIBERADA DO INPUT DO TAMANHO DA FONTE
-    $(document).on("keyup", "#size-input", function(){
-  var font_size = $(this).val();
-  //ALTERA-SE A COR DE FUNDO COM O TAMANHO
-  $(this).parents(':eq(1)').css({
-    "font-size": font_size 
-  });
-
-    $('.editor').css({
-    "font-size": '14px'
-  });
-});
 
 
-//QUANDO A TECLA É LIBERADA DO INPUT DA COR DO TEXTO
+//COR DO TEXTO
     $(document).on("keyup", "#txtcolor-input", function(){
   var color_value = $(this).val();
   $(this).parents().css({
     "color": color_value
   });
+  //RETORNA A COR DA FONTE DO EDITOR A COR ORIGINAL
+      $('.editor').css({
+    "color": '#333'
+  });
 });
 
 
-//QUANDO A FONTE É SELECIONADA
-    $(document).on("click", "#font-select", function(){
+
+//TAMANHO DA FONTE
+    $(document).on("click", ".size-font", function(){
+     
+  var font_size = $(this).val();
+  //ALTERA-SE A FONTE DO 2º PAI, INDICE DE INICIO NO 0
+  $(this).parents(':eq(1)').css({
+    "font-size": font_size + 'px'
+  });
+
+//RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
+    $('.editor').css({
+    "font-size": '18px'
+  });
+   console.log(font_size);
+});
+
+
+
+//FONTE
+    $(document).on("click", ".font-family", function(){
   var font_value = $(this).val();
 //ALTERA O PARA O VALOR SELECIONADO
   $(this).parents(':eq(2)').css({
@@ -60,6 +77,41 @@ $(document).on('switchChange.bootstrapSwitch', function() {
   });
 });
 
-/**
- *    FIM DA EDIÇÃO DA INFORMAÇÃO
- */
+
+//ESTILO DA FONTE
+    $(document).on("click", ".estilo-font", function(){
+  var font_value = $(this).val();
+//ALTERA O PARA O VALOR SELECIONADO
+  $(this).parents(':eq(2)').css({
+    "font-style": font_value
+  });
+
+//RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
+      $('.editor').css({
+    "font-style": 'normal'
+  });
+});
+
+//PESO DA FONTE
+    $(document).on("click", ".peso-font", function(){
+  var font_value = $(this).val();
+//ALTERA O PARA O VALOR SELECIONADO
+  $(this).parents(':eq(2)').css({
+    "font-weight": font_value
+  });
+
+//RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
+      $('.editor').css({
+    "font-weight": 'normal'
+  });
+});
+
+//ALINHAMENTO
+    $(document).on("click", "div.alignment", function(){
+  var alignment = $(this).attr(id);
+//ALTERA O PARA O VALOR SELECIONADO
+  $(this).parents(':eq(2)').css({
+    "text-align": alignment
+  });
+  alert(alignment);
+});
