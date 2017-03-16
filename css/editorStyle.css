@@ -1,23 +1,16 @@
     .edit{
-        color: red;
-        font-size: 1em;
-        font-weight: bold;
-    }
-
-    div.editor{
-        line-height: 200%;
+        float: right;
     }
     
-	.editor-info, .editor-agrupador{
+	.editor{
 	display:none;
 	width: 100%;
-	height: 405px;
 	background-color:#e1e1e1 ; 
 	color: #333; 
-	padding: 0px;
     border-radius: 10px;
     font-family: Helvetica, sans-serif;
     padding: 20px;
+    margin-top: 10px;
 	}
 
     #font-select{
@@ -27,5 +20,14 @@
     #bgcolor-input, #txtcolor-input, #size-input {
         color: #333;
     }
-    /*<img src="https://www.questmanager.com/questmanager_survey/images/qm_externo.gif">*/
+    .form-control{
+        width: 20%;
+        display: inline;
+    }
+
+    input[type="text"]{
+        border-radius: 5px;
+    }
+
+    /*<img src="https://www.questmanager.com/questmanager_survey/images/qm_externo.gif"> logo qm*/
 
