@@ -770,7 +770,7 @@
     inverse: false,
     radioAllOff: false,
     onColor: 'success',
-    offColor: 'primary',
+    offColor: 'danger',
     onText: 'ON',
     offText: 'OFF',
     labelText: '&nbsp',

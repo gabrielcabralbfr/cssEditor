@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 /*
-* ATRIBUI UM SWITCH PARA CADA DIV -- INCOMPLETO
+* ATRIBUI UM SWITCH PARA CADA DIV
 */
 $(document).on('switchChange.bootstrapSwitch', '#switch-idioma', function() {
    $('.editar-idioma').slideToggle(800);
@@ -19,10 +19,73 @@ $(document).on('switchChange.bootstrapSwitch', '#switch-agrupador', function() {
      $('.editor-agrupador').slideToggle(800);
 });
 
+$(document).on('switchChange.bootstrapSwitch', '#switch-unica', function() {
+     $('.editor-unica').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-sel_unica_combo', function() {
+     $('.editor-unica-combo').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-sel_multipla', function() {
+     $('.editor-multipla').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-sel_multipla_list', function() {
+     $('.editor-multipla-list').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-aberta', function() {
+     $('.editor-aberta').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-aberta-modelo', function() {
+     $('.editor-aberta-modelo').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-aberta-modelo', function() {
+     $('.editor-aberta-modelo').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-unica', function() {
+     $('.editor-grade-unica').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-unica-combo', function() {
+     $('.editor-grade-unica-combo').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-multipla', function() {
+     $('.editor-grade-multipla').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-multipla-list', function() {
+     $('.editor-grade-multipla-list').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-aberta', function() {
+     $('.editor-grade-aberta').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-aberta-numerica', function() {
+     $('.editor-grade-aberta-numerica').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-ranking', function() {
+     $('.editor-grade-ranking').slideToggle(800);
+});
+
+$(document).on('switchChange.bootstrapSwitch', '#switch-grade-somatorio', function() {
+     $('.editor-grade-somatorio').slideToggle(800);
+});
+
 
 /*
 * FIM ATRIBUI UM SWITCH PARA CADA DIV
 */
+
+
+
 
 
 //BACKGROUND COLOR
@@ -51,7 +114,7 @@ $(document).on('switchChange.bootstrapSwitch', '#switch-agrupador', function() {
 
 
 //TAMANHO DA FONTE
-    $(document).on("click", ".size-font", function(){
+    $(document).on("click", ".fonte-tamanho", function(){
      
   var font_size = $(this).val();
   //ALTERA-SE A FONTE DO 2º PAI, INDICE DE INICIO NO 0
@@ -61,15 +124,15 @@ $(document).on('switchChange.bootstrapSwitch', '#switch-agrupador', function() {
 
 //RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
     $('.editor').css({
-    "font-size": '18px'
+    "font-size": '20px'
   });
-   console.log(font_size);
+   
 });
 
 
 
 //FONTE
-    $(document).on("click", ".font-family", function(){
+    $(document).on("click", ".fonte-familia", function(){
   var font_value = $(this).val();
 //ALTERA O PARA O VALOR SELECIONADO
   $(this).parents(':eq(2)').css({
@@ -79,35 +142,35 @@ $(document).on('switchChange.bootstrapSwitch', '#switch-agrupador', function() {
 
 
 //ESTILO DA FONTE
-    $(document).on("click", ".estilo-font", function(){
+    $(document).on("click", ".fonte-estilo", function(){
   var font_value = $(this).val();
 //ALTERA O PARA O VALOR SELECIONADO
   $(this).parents(':eq(2)').css({
     "font-style": font_value
   });
 
-//RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
+//RETORNA O ESTILO DA FONTE DO EDITOR AO ESTILO ORIGINAL
       $('.editor').css({
     "font-style": 'normal'
   });
 });
 
 //PESO DA FONTE
-    $(document).on("click", ".peso-font", function(){
+    $(document).on("click", ".fonte-peso", function(){
   var font_value = $(this).val();
 //ALTERA O PARA O VALOR SELECIONADO
   $(this).parents(':eq(2)').css({
     "font-weight": font_value
   });
 
-//RETORNA O TAMANHO DA FONTE DO EDITOR AO TAMANHO ORIGINAL
+//RETORNA O PESO DA FONTE DO EDITOR AO PESO ORIGINAL
       $('.editor').css({
     "font-weight": 'normal'
   });
 });
 
 //ALINHAMENTO
-    $(document).on("click", "div.alignment", function(){
+    $(document).on("click", "#center-align", function(){
   var alignment = $(this).attr(id);
 //ALTERA O PARA O VALOR SELECIONADO
   $(this).parents(':eq(2)').css({
