@@ -1,0 +1,33 @@
+    .edit{
+        float: right;
+    }
+    
+	.editor{
+	display:none;
+	width: 100%;
+	background-color:#e1e1e1 ; 
+	color: #333; 
+    border-radius: 10px;
+    font-family: Helvetica, sans-serif;
+    padding: 20px;
+    margin-top: 10px;
+	}
+
+    #font-select{
+        color: black;
+    }
+
+    #bgcolor-input, #txtcolor-input, #size-input {
+        color: #333;
+    }
+    .form-control{
+        width: 20%;
+        display: inline;
+    }
+
+    input[type="text"]{
+        border-radius: 5px;
+    }
+
+    /*<img src="https://www.questmanager.com/questmanager_survey/images/qm_externo.gif"> logo qm*/
+
