@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 $(document).ready(function(){
  $("input[name='switch-editor']").bootstrapSwitch(); //inicializa o switch
 });
