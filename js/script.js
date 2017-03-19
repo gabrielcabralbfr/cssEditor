@@ -42,10 +42,6 @@ $(document).on('switchChange.bootstrapSwitch', '#switch-aberta-modelo', function
      $('.editor-aberta-modelo').slideToggle(800);
 });
 
-$(document).on('switchChange.bootstrapSwitch', '#switch-aberta-modelo', function() {
-     $('.editor-aberta-modelo').slideToggle(800);
-});
-
 $(document).on('switchChange.bootstrapSwitch', '#switch-grade-unica', function() {
      $('.editor-grade-unica').slideToggle(800);
 });

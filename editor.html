@@ -7,6 +7,7 @@
   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://use.fontawesome.com/bf720d873a.js"></script>
 <link rel="stylesheet" type="text/css" href="css/editorStyle.css">
 <script type="text/javascript" src="js/script.js"></script>
 <link href="css/bootstrap-switch.css" rel="stylesheet">
@@ -34,7 +35,7 @@
                         <tr>
                             <td style="text-align: right">
                                 <span id="lb_idioma" class="lb_idioma" style="background-color:Transparent;">Idioma:&nbsp;</span><select name="drop_idioma" onchange="turn_on_off(0);setTimeout('__doPostBack(\'drop_idioma\',\'\')', 0)" id="drop_idioma" class="categoria">
-		<span class="edit"> <span class="edit"> </span>
+		
         <option selected="selected" value="pt-BR">português (Brasil)</option>
 		<option value="EN-US">Inglês</option>
 		<option value="ES-ES">Espanhol</option>
@@ -68,8 +69,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <table style="width:100%;"><tbody><tr><td class="topico">1 - TEXTO DO AGRUPADOR <span class="edit">
-									 <input type="checkbox" name="switch-editor" id="switch-agrupador"></span>
+                                <table style="width:100%;"><tbody><tr><td class="topico">1 - TEXTO DO AGRUPADOR <span class="edit pull-right">
+									 <i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
 								
  <div class="editor-agrupador editor">
                             Fonte <select class="form-control selecao-fonte-agrupador fonte-familia">
@@ -898,7 +899,7 @@
                                     <div id="div_btn">
                                         <table style="width: 100%;">
                                             <tbody><tr>
-                                                                                        <td style="text-align: center">
+                                                                                        <td style="text-align: center"> <input type="checkbox" name="switch-editor" id="switch-idioma">
                                                                                             <input type="button" name="btn_volta_tudo" value="<<" id="btn_volta_tudo" tabindex="5" title="<<" class="voltar">
                                                                                             <input type="button" name="btn_voltar" value="VOLTAR" id="btn_voltar" tabindex="4" title="Voltar" class="voltar">
                                                                                             <input type="submit" name="btn_avancar" value="AVANÇAR" id="btn_avancar" tabindex="1" title="Avançar" class="button">

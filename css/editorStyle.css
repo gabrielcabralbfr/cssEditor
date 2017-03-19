@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
     .edit{
         float: right;
     }
@@ -32,38 +32,10 @@
 
     /*<img src="https://www.questmanager.com/questmanager_survey/images/qm_externo.gif"> logo qm*/
 
-=======
-    .edit{
-        float: right;
-    }
-    
-	.editor{
-	display:none;
-	width: 100%;
-	background-color:#e1e1e1 ; 
-	color: #333; 
-    border-radius: 10px;
-    font-family: Helvetica, sans-serif;
-    padding: 20px;
-    margin-top: 10px;
-	}
 
-    #font-select{
-        color: black;
-    }
-
-    #bgcolor-input, #txtcolor-input, #size-input {
-        color: #333;
-    }
-    .form-control{
-        width: 20%;
-        display: inline;
-    }
-
-    input[type="text"]{
-        border-radius: 5px;
-    }
-
-    /*<img src="https://www.questmanager.com/questmanager_survey/images/qm_externo.gif"> logo qm*/
-
->>>>>>> f0b39dd03a9e7f6f66ba93159997226d5c2dd662
+td.topico .edit{
+    display:none;
+}
+td.topico:hover > .edit{
+   display:block;
+}
